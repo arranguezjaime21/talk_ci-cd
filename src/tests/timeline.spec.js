@@ -15,7 +15,8 @@ describe('Timeline Screen',() => {
                 'Failure Screenshot',
                 Buffer.from(screenshot, 'base64'),
                 'image/png'
-            )
+                
+            ) 
         }
     });
 
