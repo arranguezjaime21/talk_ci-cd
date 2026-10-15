@@ -1,0 +1,35 @@
+{
+  "name": "machetalk",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    
+    "test:timeline": "wdio run ./config/wdio.conf.js --spec ./src/tests/timeline.spec.js",
+    "test:login": "wdio run ./config/wdio.conf.js --spec ./src/tests/login.spec.js",
+    "allure:generate": "allure generate allure-results -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "allure:delete": "rm -rf allure-report allure-results",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^10.0.1",
+    "@wdio/appium-service": "^10.0.2",
+    "@wdio/cli": "^10.0.2",
+    "@wdio/local-runner": "^10.0.2",
+    "@wdio/mocha-framework": "^10.0.1",
+    "@wdio/spec-reporter": "^10.0.1",
+    "appium-uiautomator2-driver": "^8.7.0",
+    "webdriverio": "^10.0.2"
+  },
+  "dependencies": {
+    "chai": "^6.3.0",
+    "dotenv": "^18.0.7"
+  }
+}
